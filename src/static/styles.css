@@ -181,6 +181,9 @@ footer {
   border-radius: 20px;
   border-left: 3px solid #7e57c2;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .participants-list li:hover {
@@ -188,8 +191,39 @@ footer {
   box-shadow: 0 2px 8px rgba(126, 87, 194, 0.2);
 }
 
-.participants-list li::before {
+.participant-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.participant-info::before {
   content: "🎓";
   margin-right: 8px;
   font-size: 0.9rem;
+}
+
+.delete-participant-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  margin-left: 8px;
+}
+
+.delete-participant-btn:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+.delete-participant-btn:active {
+  transform: scale(0.95);
 }
